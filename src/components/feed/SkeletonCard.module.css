@@ -1,0 +1,90 @@
+.card {
+  background-color: var(--color-card);
+  border: 0.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-3);
+}
+
+.body {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer {
+  padding: var(--space-3) var(--space-4);
+  border-top: 0.5px solid var(--color-border);
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ── Shimmer base ────────────────────────────────────────── */
+.badge,
+.headline,
+.headlineShort,
+.line,
+.lineShort,
+.ripple,
+.footerLeft,
+.footerRight {
+  background: linear-gradient(
+    90deg,
+    var(--color-border) 25%,
+    var(--color-bg) 50%,
+    var(--color-border) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease infinite;
+  border-radius: var(--radius-sm);
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.badge {
+  width: 60px;
+  height: 20px;
+  border-radius: var(--radius-full);
+}
+
+.headline {
+  width: 100%;
+  height: 18px;
+}
+
+.headlineShort {
+  width: 70%;
+  height: 18px;
+}
+
+.line {
+  width: 100%;
+  height: 13px;
+}
+
+.lineShort {
+  width: 55%;
+  height: 13px;
+}
+
+.ripple {
+  width: 100%;
+  height: 44px;
+  border-radius: var(--radius-md);
+}
+
+.footerLeft {
+  width: 120px;
+  height: 12px;
+}
+
+.footerRight {
+  width: 60px;
+  height: 12px;
+}

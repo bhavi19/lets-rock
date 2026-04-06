@@ -1,0 +1,38 @@
+{
+  "name": "briefworld",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "14.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "next-auth": "^4.24.7",
+    "mongoose": "^8.4.0",
+    "@supabase/supabase-js": "^2.43.4",
+    "@upstash/redis": "^1.31.5",
+    "clsx": "^2.1.1",
+    "date-fns": "^3.6.0",
+    "razorpay": "^2.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.5",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.3",
+    "prettier": "^3.3.1",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0"
+  }
+}
