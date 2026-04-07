@@ -1,0 +1,38 @@
+.meter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.label {
+  font-size: 10px;
+  font-weight: var(--weight-medium);
+  color: var(--color-text-tertiary);
+  min-width: 8px;
+}
+
+.track {
+  width: 52px;
+  height: 3px;
+  background-color: var(--color-border);
+  border-radius: var(--radius-full);
+  position: relative;
+  overflow: visible;
+}
+
+.fill {
+  height: 100%;
+  background-color: var(--color-accent);
+  border-radius: var(--radius-full);
+}
+
+.marker {
+  position: absolute;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent);
+  transform: translate(-50%, -50%);
+  border: 1.5px solid var(--color-card);
+}

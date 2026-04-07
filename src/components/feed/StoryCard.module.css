@@ -1,0 +1,159 @@
+.card {
+  background-color: var(--color-card);
+  border: 0.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  animation: fadeIn 0.3s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Body (link wrapper) ─────────────────────────────────── */
+.body {
+  display: block;
+  padding: var(--space-4);
+  text-decoration: none;
+  color: inherit;
+}
+
+.body:hover .headline {
+  color: var(--color-accent);
+}
+
+/* ── Headline ────────────────────────────────────────────── */
+.headline {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+  line-height: var(--leading-snug);
+  margin-top: var(--space-2);
+  transition: color var(--transition-fast);
+}
+
+@media (min-width: 480px) {
+  .headline {
+    font-size: var(--text-lg);
+  }
+}
+
+/* ── Plain English ───────────────────────────────────────── */
+.plainEnglish {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+  margin-top: var(--space-2);
+}
+
+/* ── Arc Section ─────────────────────────────────────────── */
+.arcSection {
+  margin-top: var(--space-3);
+}
+
+.arcToggle {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  color: var(--color-accent);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.arcToggle:hover {
+  opacity: 0.75;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-4);
+  border-top: 0.5px solid var(--color-border);
+  background-color: var(--color-bg);
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+/* ── Actions ─────────────────────────────────────────────── */
+.actions {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  color: var(--color-accent);
+  background: none;
+  border: none;
+  padding: var(--space-1) 0;
+  cursor: pointer;
+  text-decoration: none;
+  min-height: 32px;
+  transition: opacity var(--transition-fast);
+}
+
+.action:hover {
+  opacity: 0.75;
+}
+
+.actionSaved {
+  color: var(--color-success);
+}
+
+/* ── Meta (sources + bias) ───────────────────────────────── */
+.meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-left: auto;
+}
+
+.sources {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sourceDot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.sourceCount {
+  font-size: 10px;
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+}
+
+/* ── Responsive: hide bias meter on tiny screens ─────────── */
+@media (max-width: 360px) {
+  .meta {
+    gap: var(--space-2);
+  }
+
+  .sourceCount {
+    display: none;
+  }
+}
