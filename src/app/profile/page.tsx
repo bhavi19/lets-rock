@@ -58,7 +58,7 @@ export default function ProfilePage() {
           <h2 className={styles.sectionTitle}>Your topics</h2>
           <div className={styles.topicsWrap}>
             {ONBOARDING_TOPICS.filter((t) =>
-              (user.topics as string[]).includes(t.id),
+              user.topics.some((topic) => topic === t.id),
             ).map((t) => (
               <span key={t.id} className={styles.topicPill}>
                 {t.emoji} {t.label}
